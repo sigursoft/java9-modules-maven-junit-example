@@ -19,7 +19,7 @@ public class Devday {
 
         ServiceLoader.load(EventService.class).forEach(eventServices::add);
 
-        List<String> events = new ArrayList<>();
+        var events = new ArrayList<String>();
 
         eventServices.stream()
                 .map(EventService::getEvents)

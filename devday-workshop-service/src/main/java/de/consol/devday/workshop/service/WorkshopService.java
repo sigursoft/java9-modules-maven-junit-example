@@ -3,8 +3,9 @@ package de.consol.devday.workshop.service;
 import de.consol.devday.service.EventService;
 
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 public class WorkshopService implements EventService {
 
@@ -14,10 +15,10 @@ public class WorkshopService implements EventService {
                 "Gamification"
             )
             .map(WorkshopService::prefix)
-            .collect(Collectors.toList());
+            .collect(toList());
     }
 
     static String prefix(String input) {
-        return "Workshop: " + input;
+        return String.format("Workshop: %s", input);
     }
 }
