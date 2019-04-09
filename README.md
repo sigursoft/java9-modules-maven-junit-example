@@ -1,4 +1,4 @@
-# Java 9 Modules Example with Maven and JUnit
+# Java 12 Modules Example with Maven and JUnit
 This simple project shows how Maven can be used to build Java 9 modules. 
 
 It uses the `ServiceLoader` to load loosely coupled services from other modules.
