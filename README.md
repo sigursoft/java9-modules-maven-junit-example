@@ -10,7 +10,7 @@ Read more in our blog post: [Getting Started with Java 9 Modules]
 
 ## Prerequisites:
 * Maven >= 3.0.0
-* JDK 9
+* JDK 12
 
 ## Running the example
 * `mvn clean package`
