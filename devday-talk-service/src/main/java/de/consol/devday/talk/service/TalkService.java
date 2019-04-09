@@ -3,8 +3,9 @@ package de.consol.devday.talk.service;
 import de.consol.devday.service.EventService;
 
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 public class TalkService implements EventService {
 
@@ -18,10 +19,10 @@ public class TalkService implements EventService {
                 "Apache Cassandra vs. MongoDB"
             )
             .map(TalkService::prefix)
-            .collect(Collectors.toList());
+            .collect(toList());
     }
 
     static String prefix(String input) {
-        return "Talk: " + input;
+        return String.format("Talk: %s", input);
     }
 }
